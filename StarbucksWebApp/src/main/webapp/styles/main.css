@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+.container {
+	padding: 2%;
+}
+.header {
+	width: 100%;
+	position: relative;
+}
+.headerelement {
+	float: left;
+	width: 6%;
+	line-height: 35px;
+}
+a{
+	text-decoration: none;
+}
+.loginform {
+	position: relative;
+	clear: both;
+	text-align: center;
+}
+
+.loginelement {
+	padding: 2%;
+}
+.submitbtn {
+	background-color: #4CAF50; 
+}
+input {
+	    border: 0;
+  outline: 0;
+  width: 50%;
+  background: transparent;
+  border-bottom: 1px solid black;
+  padding: 0.5%;
+}
