@@ -4,10 +4,29 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Login</title>
+<link rel="stylesheet" href="styles/main.css" type="text/css">
 </head>
 <body>
-
-<div class="btnregister" type="submit"><a href="/register">Join now</a></div>
+<div class="container">
+<div class="header">
+<div class="headerelement">
+<img src="resources/images/starbuckshomelogo.png" width="40px" height="40px" />
+</div>
+<div class="headerelement"><a href="/index">Sign in</a></div>
+<div class="headerelement"><a href="/register">Join now</a></div>
+</div><br />
+<div class="loginform">
+<form action="" method="post">
+<div class="loginelement">
+    <input type="text" placeholder="Username or email address" name="emailid" required><br />
+   </div>
+    <div class="loginelement">
+    <input type="password" placeholder="Enter Password" name="pwd" required><br />
+   </div>     
+    <button class="submitbtn" type="submit">Login</button>
+</form>
+</div>
+</div>
 </body>
 </html>
