@@ -50,6 +50,15 @@ public class HomeController {
 		return "addcard";
 	}
 	
+	@GetMapping("/store")
+	public String Store() {
+		return "store";
+	}
+	
+	@GetMapping("/rewards")
+	public String Rewards() {
+		return "rewards";
+	}
 
 	
 	@PostMapping("/addUser")
