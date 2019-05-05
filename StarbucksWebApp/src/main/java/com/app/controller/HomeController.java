@@ -1,5 +1,10 @@
 package com.app.controller;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.app.model.Card;
+import com.app.model.Order;
 import com.app.model.Payment;
 import com.app.model.User;
 import com.app.service.UserService;
@@ -49,6 +55,16 @@ public class HomeController {
 	@GetMapping("/addcard")
 	public String AddCard() {
 		return "addcard";
+	}
+	
+	@GetMapping("/order")
+	public String Order() {
+		return "order";
+	}
+	
+	@GetMapping("/payments")
+	public String Payments() {
+		return "payments";
 	}
 	
 
@@ -121,12 +137,23 @@ public class HomeController {
 	
 	}
 	
-	@PostMapping("/order")
-	public void order(@RequestParam("paymentId") String paymentId, @RequestParam("cardNumber") String cardNumber,
-			@RequestParam("amount") int amount)
+	@PostMapping("/createorder")
+	public String createorder(@RequestParam("cappuccino") int cappuccinocount, @RequestParam("latte") int lattecount,
+			@RequestParam("macchiato") int macchiatocount, @RequestParam("mocha") int mochacount, HttpServletRequest request)
 	{
-			
-	
+		Map<String, Integer> m = new HashMap<String, Integer>();
+		ArrayList<Order> orderarray = new ArrayList<Order>();
+		m.put("Cappucino", cappuccinocount);
+		m.put("Latte", lattecount);
+		m.put("Macchiato", macchiatocount);
+		m.put("Mocha", mochacount);
+		System.out.println(cappuccinocount);
+		System.out.println(lattecount);
+		System.out.println(macchiatocount);
+		System.out.println(mochacount);
+		orderarray = userService.createOrder(m);
+		request.setAttribute("orderlist", orderarray);
+		return "payments";
 	}
 	
 	@PostMapping("/logout")
