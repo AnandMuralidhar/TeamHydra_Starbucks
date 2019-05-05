@@ -56,7 +56,7 @@ public class HomeController {
 	public String AddCard() {
 		return "addcard";
 	}
-	
+
 	@GetMapping("/order")
 	public String Order() {
 		return "order";
@@ -66,8 +66,16 @@ public class HomeController {
 	public String Payments() {
 		return "payments";
 	}
-	
 
+	@GetMapping("/store")
+	public String Store() {
+		return "store";
+	}
+	
+	@GetMapping("/rewards")
+	public String Rewards() {
+		return "rewards";
+	}
 	
 	@PostMapping("/addUser")
 	public String addUser(@RequestParam("email") String email, @RequestParam("fname") String fname, @RequestParam("lname") String lname,
@@ -126,6 +134,7 @@ public class HomeController {
 		
 	}
 	
+
 	@PostMapping("/payment")
 	public void payment(@RequestParam("paymentId") String paymentId, @RequestParam("cardNumber") String cardNumber,
 			@RequestParam("amount") int amount)
@@ -140,6 +149,10 @@ public class HomeController {
 	@PostMapping("/createorder")
 	public String createorder(@RequestParam("cappuccino") int cappuccinocount, @RequestParam("latte") int lattecount,
 			@RequestParam("macchiato") int macchiatocount, @RequestParam("mocha") int mochacount, HttpServletRequest request)
+
+	@PostMapping("/order")
+	public void order(@RequestParam("paymentId") String paymentId, @RequestParam("cardNumber") String cardNumber,
+			@RequestParam("amount") int amount)
 	{
 		Map<String, Integer> m = new HashMap<String, Integer>();
 		ArrayList<Order> orderarray = new ArrayList<Order>();
@@ -166,15 +179,50 @@ public class HomeController {
 	public String loginUser(@RequestParam("emailid")String email,@RequestParam("pwd")String password, HttpSession session)
 	{
 		User user = userService.getUser(email,password);
+		Card card = userService.getCardDetails(email);
+		
+		double cardBal;
+		
+		if(card == null)
+		{
+			cardBal = 0;
+		}else
+		{
+			cardBal = card.getCardBalance();
+		}
+		
+		
+		session.setAttribute("CardBalance", cardBal);
+		
 		
 		if(user == null) {
-			
-			System.out.println("User does not exist");	
+		
 			return "index";
 		}
 		session.setAttribute("UserEmail", email);
 		return "dashboard";
 	}
 	
-
+	@PostMapping("/payment")
+	public String payment( @RequestParam("amount")double amount, HttpSession session)
+	{	
+		String email = session.getAttribute("UserEmail").toString();
+		Card card = userService.getCardDetails(email);	
+		double cardBalance;	
+		if(card == null)
+		{
+			cardBalance = 0;
+		}
+		else
+		{
+			cardBalance = card.getCardBalance();
+			if(amount > cardBalance)
+			{
+				cardBalance = cardBalance - amount;
+				card.setCardBalance(cardBalance);
+			}
+		}
+		
+		return "payment";
+	}
 }

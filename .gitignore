@@ -20,3 +20,13 @@ StarbucksWebApp/target/m2e-wtp/web-resources/META-INF/maven/10101/StarbucksWebAp
 StarbucksWebApp/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
 StarbucksWebApp/target/classes/com/app/model/User.class
 StarbucksWebApp/target/classes/com/app/controller/HomeController.class
+StarbucksWebApp/target/classes/com/app/controller/HomeController.class
+StarbucksWebApp/target/classes/com/app/repository/UserRepository.class
+StarbucksWebApp/target/classes/com/app/service/UserService.class
+StarbucksWebApp/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
+StarbucksWebApp/target/classes/com/app/service/UserService.class
+StarbucksWebApp/target/classes/com/app/controller/HomeController.class
+StarbucksWebApp/target/classes/com/app/controller/HomeController.class
+StarbucksWebApp/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
+StarbucksWebApp/target/m2e-wtp/web-resources/META-INF/maven/10101/StarbucksWebApp/pom.properties
+*.class

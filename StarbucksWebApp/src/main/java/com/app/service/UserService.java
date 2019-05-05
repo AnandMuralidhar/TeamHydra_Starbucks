@@ -47,6 +47,17 @@ public class UserService {
 	}
 	
 	
+	public Card getCardDetails(String email) {
+
+		Card card = cardRepository.getCardDetails(email);
+
+		if (card != null) {
+			return card;
+		}
+		return null;
+	}
+	
+	
 	/** Adding cards into db*/
 	public boolean addCard(Card card) {
 		try {
