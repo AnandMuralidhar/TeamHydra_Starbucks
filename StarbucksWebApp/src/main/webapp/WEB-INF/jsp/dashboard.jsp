@@ -15,7 +15,19 @@
 </div>
 <div class="headerelement"><a href="/index">Order</a></div>
 <div class="headerelement"><a href="/register">Cards</a></div>
-</div><br />
+</div><br /><br />
+
+<h1><font color= "black">${ErrorMessage}</font></h1>
+
+<form action="/addCard" method="post">	
+    <p>Add New Card</p>
+     <label for="cardNumber"><b>First Name</b></label>
+	 <input class="input" type="text" name="cardNumber" placeholder="cardNumber" required/><br/>
+	 <label for="cardCode"><b>Last Name</b></label>
+	 <input class="input" type="text" name="cardCode" placeholder="cardCode" required/><br />
+	<button class="signupbutton" type="submit">Add Card</button>		
+	
+</form>
 </div>
 </body>
 </html>
