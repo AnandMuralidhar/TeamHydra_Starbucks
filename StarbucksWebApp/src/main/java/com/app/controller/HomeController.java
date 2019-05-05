@@ -133,16 +133,19 @@ public class HomeController {
 	public String logout( HttpSession session) {
 		session.invalidate();
 		return "index";
+	}
 
 	@PostMapping("/loginUser")
-	public String loginUser(@RequestParam("emailid")String email,@RequestParam("pwd")String password)
+	public String loginUser(@RequestParam("emailid")String email,@RequestParam("pwd")String password, HttpSession session)
 	{
 		User user = userService.getUser(email,password);
 		
 		if(user == null) {
 			
-			System.out.println("User does not exsist");	
+			System.out.println("User does not exist");	
+			return "index";
 		}
+		session.setAttribute("UserEmail", email);
 		return "dashboard";
 	}
 	
