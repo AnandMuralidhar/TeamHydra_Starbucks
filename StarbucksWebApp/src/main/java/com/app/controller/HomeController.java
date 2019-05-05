@@ -114,7 +114,7 @@ public class HomeController {
 	public void payment(@RequestParam("paymentId") String paymentId, @RequestParam("cardNumber") String cardNumber,
 			@RequestParam("amount") int amount)
 	{
-		Payment pay = new Payment();
+		Payment pay = new Payment(amount, cardNumber);
 		pay.setPaymentId(paymentId);
 		pay.setCardNumber(cardNumber);
 		pay.setAmount(amount);	
