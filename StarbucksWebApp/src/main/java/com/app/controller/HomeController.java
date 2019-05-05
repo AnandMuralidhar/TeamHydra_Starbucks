@@ -60,11 +60,6 @@ public class HomeController {
 		user.setZipCode(zipcode);
 		user.setPassword(password);
 		
-//		user.setEmailID("abc@gmail.com");
-//		user.setFirstName("ABC");
-//		user.setLastName("XYZ");
-//		user.setZipCode(98);
-//		user.setPassword("root");
 		
 		
 		if(userService.adduser(user))
