@@ -9,9 +9,10 @@ System.out.println("emailid: " +UserEmail);
 <div class="headerelement" onclick="displayMyCardsOptions()">My Cards
 <ul id="mycardssuboptions">
 <li><a href="dashboard">My Cards</a></li>
-<li><a href="/mycardspay">My Cards Pay</a></li>
+<li><a href="mycardspay">My Cards Pay</a></li>
 </ul>
 </div>
+<div class="headerelement"><a href="order">Order</a></div>
 <div class="headerelement" onclick="displayPaymentsOptions()">Payments
 <ul id="paymentssuboptions">
 <li>Find Store</li>
@@ -23,7 +24,7 @@ System.out.println("emailid: " +UserEmail);
 <li>Make Every visit Count</li>
 </ul>
 </div>
-<div class="headerelement"><a href="/stores">Stores</a></div>
+<div class="headerelement"><a href="stores">Stores</a></div>
 <div class="headerelement" onclick="displaySettingsOptions()">Settings
 <ul id="settingssuboptions">
  <li><a href="/addcard">Add Card</a></li>
