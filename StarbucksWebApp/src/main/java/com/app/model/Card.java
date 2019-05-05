@@ -1,9 +1,17 @@
 package com.app.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+
+
+@Entity
 public class Card{
+	
+	@Id
 	private String cardNumber;
 	private String cardCode;
-	private String userEmail;
+	private String emailID;
 	private double cardBalance;
 	
 	public String getCardNumber() {
@@ -18,16 +26,27 @@ public class Card{
 	public void setCardCode(String cardCode) {
 		this.cardCode = cardCode;
 	}
-	public String getUserEmail() {
-		return userEmail;
+
+	
+	public String getEmailID() {
+		return emailID;
 	}
-	public void setUserEmail(String userEmail) {
-		this.userEmail = userEmail;
+	public void setEmailID(String emailID) {
+		this.emailID = emailID;
 	}
+
 	public double getCardBalance() {
 		return cardBalance;
 	}
 	public void setCardBalance(double cardBalance) {
 		this.cardBalance = cardBalance;
 	}
+	@Override
+	public String toString() {
+		return "Card [cardNumber=" + cardNumber + ", cardCode=" + cardCode + ", emailID=" + emailID + ", cardBalance="
+				+ cardBalance + "]";
+	}
+	
+	
+	
 }

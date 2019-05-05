@@ -12,3 +12,6 @@ StarbucksWebApp/.project
 StarbucksWebApp/.settings/org.eclipse.jdt.core.prefs
 StarbucksWebApp/target/m2e-wtp/web-resources/META-INF/maven/10101/StarbucksWebApp/pom.properties
 *.MF
+StarbucksWebApp/target/m2e-wtp/web-resources/META-INF/maven/10101/StarbucksWebApp/pom.properties
+*.MF
+*.class
