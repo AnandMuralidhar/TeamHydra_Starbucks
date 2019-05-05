@@ -11,6 +11,11 @@ public class Payment {
 	private double amount ;
 	private String cardNumber;
 	
+	public Payment(double amount, String cardNumber ) {
+		this.amount = amount;
+		this.cardNumber = cardNumber;
+	}
+	
 	public String getPaymentId() {
 		return paymentId;
 	}
