@@ -15,5 +15,6 @@
 </div><br /><br />
 </div>
 
+<h1><font color= "black">Card Balance: ${CardBalance}$</font></h1>
 </body>
 </html>
