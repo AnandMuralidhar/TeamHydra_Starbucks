@@ -9,28 +9,43 @@
 </head>
 <body>
 <div class="container">
+<div class="leftcontent card">
 <div class="header">
 <div class="headerelement">
 <img src="resources/images/starbuckshomelogo.png" width="40px" height="40px" />
 </div>
 <div class="headerelement"><a href="/index">Sign in</a></div>
 <div class="headerelement"><a href="/register">Join now</a></div>
-</div><br />
+</div>
+<div class="headercontent">
+<h2>Create an account...</h2>
+</div>
+</div>
+<div class="rightcontent card">
+<div class="registerform">
 <form action="/addUser" method="post">	
-    <p>Please fill in this form to create an account.</p>
-     <label for="fname"><b>First Name</b></label>
-	 <input class="input" type="text" name="fname" placeholder="firstname" required/><br/>
-	 <label for="lname"><b>Last Name</b></label>
-	 <input class="input" type="text" name="lname" placeholder="lastname" required/><br />
-	  <label for="zipcode"><b>Zip code</b></label>
+    <p>PERSONAL INFORMATION</p>
+     <div class="loginelement">
+	 <input class="input" type="text" name="fname" placeholder="First name" required/><br/>
+	 </div>
+	  <div class="loginelement">
+	 <input class="input" type="text" name="lname" placeholder="Last name" required/><br />
+	 </div>
+	  <div class="loginelement">
 	 <input class="input" type="text" name="zipcode" placeholder="Zip code" required/>	<br />
-	 <label for="emailid"><b>Email Id</b></label>
-	 <input class="input" type="text" name="email" id="email" placeholder="abc@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required/><br />
-	 <label for="pwd"><b>Password</b></label>
-	 <input class="input" type="password" name="password" placeholder="password" required/>	<br />
-	<button class="signupbutton" type="submit">SignUp</button>		
+	 </div>
+	 <p>ACCOUNT SECURITY</p>
+	  <div class="loginelement">
+	 <input class="input" type="text" name="email" id="email" placeholder="Email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required/><br />
+	 </div>
+	  <div class="loginelement">
+	 <input class="input" type="password" name="password" placeholder="Password" required/>	<br />
+	</div>
+	<button class="submitbtn" type="submit">Create account</button>		
 	
 </form>
+</div>
+</div>
 </div>
 </body>
 </html>

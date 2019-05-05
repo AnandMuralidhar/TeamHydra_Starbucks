@@ -46,6 +46,10 @@ public class HomeController {
 	public String MyCards() {
 		return "dashboard";
 	}
+	@GetMapping("/addcard")
+	public String AddCard() {
+		return "addcard";
+	}
 	
 
 	
@@ -60,11 +64,6 @@ public class HomeController {
 		user.setZipCode(zipcode);
 		user.setPassword(password);
 		
-//		user.setEmailID("abc@gmail.com");
-//		user.setFirstName("ABC");
-//		user.setLastName("XYZ");
-//		user.setZipCode(98);
-//		user.setPassword("root");
 		
 		
 		if(userService.adduser(user))
@@ -97,8 +96,8 @@ public class HomeController {
 		}else
 		{
 			model.addAttribute("ErrorMessage", "Card Number / Card Code is not valid");
-		}
-		
+			return "addcard";
+		}		
 
 		if(userService.addCard(card))
 		{
@@ -107,7 +106,6 @@ public class HomeController {
 		{
 			System.out.println("Card not added successfully");
 		}
-		
 		return "dashboard";
 		
 	}
@@ -121,6 +119,48 @@ public class HomeController {
 		pay.setCardNumber(cardNumber);
 		pay.setAmount(amount);	
 	
+	}
+	
+	@PostMapping("/order")
+	public void order(@RequestParam("paymentId") String paymentId, @RequestParam("cardNumber") String cardNumber,
+			@RequestParam("amount") int amount)
+	{
+			
+	
+	}
+	
+	@PostMapping("/logout")
+	public String logout( HttpSession session) {
+		session.invalidate();
+		return "index";
+	}
+
+	@PostMapping("/loginUser")
+	public String loginUser(@RequestParam("emailid")String email,@RequestParam("pwd")String password, HttpSession session)
+	{
+		User user = userService.getUser(email,password);
+		Card card = userService.getCardDetails(email);
+		
+		double cardBal;
+		
+		if(card == null)
+		{
+			cardBal = 0;
+		}else
+		{
+			cardBal = card.getCardBalance();
+		}
+		
+		
+		session.setAttribute("CardBalance", cardBal);
+		
+		
+		if(user == null) {
+		
+			return "index";
+		}
+		session.setAttribute("UserEmail", email);
+		return "dashboard";
 	}
 	
 

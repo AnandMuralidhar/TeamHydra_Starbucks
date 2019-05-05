@@ -9,15 +9,21 @@
 </head>
 <body>
 <div class="container">
+<div class="leftcontent card">
 <div class="header">
 <div class="headerelement">
 <img src="resources/images/starbuckshomelogo.png" width="40px" height="40px" />
 </div>
 <div class="headerelement"><a href="/index">Sign in</a></div>
 <div class="headerelement"><a href="/register">Join now</a></div>
-</div><br />
+</div>
+<div class="headercontent">
+<h2>Sign in or create an account...</h2>
+</div>
+</div>
+<div class="rightcontent card">
 <div class="loginform">
-<form action="" method="post">
+<form action="/loginUser" method="post">
 <div class="loginelement">
     <input type="text" placeholder="Username or email address" name="emailid" required><br />
    </div>
@@ -26,6 +32,7 @@
    </div>     
     <button class="submitbtn" type="submit">Login</button>
 </form>
+</div>
 </div>
 </div>
 </body>

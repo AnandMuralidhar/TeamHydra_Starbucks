@@ -5,29 +5,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Dashboard</title>
-<link rel="stylesheet" href="styles/main.css" type="text/css">
+<script src="js/main.js"></script>
+<link rel="stylesheet" href="styles/dashboard.css" type="text/css">
 </head>
 <body>
 <div class="container">
 <div class="header">
-<div class="headerelement">
-<img src="resources/images/starbuckshomelogo.png" width="40px" height="40px" />
-</div>
-<div class="headerelement"><a href="/index">Order</a></div>
-<div class="headerelement"><a href="/register">Cards</a></div>
+<%@ include file="header.jspf" %>
 </div><br /><br />
-
-<h1><font color= "black">${ErrorMessage}</font></h1>
-
-<form action="/addCard" method="post">	
-    <p>Add New Card</p>
-     <label for="cardNumber"><b>First Name</b></label>
-	 <input class="input" type="text" name="cardNumber" placeholder="cardNumber" required/><br/>
-	 <label for="cardCode"><b>Last Name</b></label>
-	 <input class="input" type="text" name="cardCode" placeholder="cardCode" required/><br />
-	<button class="signupbutton" type="submit">Add Card</button>		
-	
-</form>
 </div>
+
+<h1><font color= "black">Card Balance: ${CardBalance}$</font></h1>
 </body>
 </html>
