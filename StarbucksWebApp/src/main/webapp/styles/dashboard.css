@@ -10,13 +10,43 @@
 }
 .headerelement {
 	float: left;
-	width: 15%;
+	width: 10%;
 	line-height: 35px;
+	text-align: center;
 }
 a{
+	color: #000000;
 	text-decoration: none;
 }
 
-.suboptions {
+#settingssuboptions {
 	display: none;
+}
+#rewardssuboptions {
+	display: none;
+}
+#paymentssuboptions {
+	display: none;
+}
+#mycardssuboptions {
+	display: none;
+}
+ul {
+	list-style: none;
+}
+li {
+ margin-left: -40px;
+}
+
+.maincontent {
+	position: absolute;
+}
+input {
+	font-size: 18px;
+  border: 0;
+  outline: 0;
+  width: 50%;
+  background: transparent;
+  border-bottom: 1px solid black;
+  padding: 0.5%;
 }

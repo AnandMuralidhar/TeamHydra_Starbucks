@@ -46,6 +46,10 @@ public class HomeController {
 	public String MyCards() {
 		return "dashboard";
 	}
+	@GetMapping("/addcard")
+	public String AddCard() {
+		return "addcard";
+	}
 	
 
 	
@@ -97,8 +101,8 @@ public class HomeController {
 		}else
 		{
 			model.addAttribute("ErrorMessage", "Card Number / Card Code is not valid");
-		}
-		
+			return "addcard";
+		}		
 
 		if(userService.addCard(card))
 		{
@@ -107,7 +111,6 @@ public class HomeController {
 		{
 			System.out.println("Card not added successfully");
 		}
-		
 		return "dashboard";
 		
 	}
@@ -121,6 +124,20 @@ public class HomeController {
 		pay.setCardNumber(cardNumber);
 		pay.setAmount(amount);	
 	
+	}
+	
+	@PostMapping("/order")
+	public void order(@RequestParam("paymentId") String paymentId, @RequestParam("cardNumber") String cardNumber,
+			@RequestParam("amount") int amount)
+	{
+			
+	
+	}
+	
+	@PostMapping("/logout")
+	public String logout( HttpSession session) {
+		session.invalidate();
+		return "index";
 	}
 	
 
