@@ -151,5 +151,26 @@ public class HomeController {
 		return "dashboard";
 	}
 	
-
+	@PostMapping("/payment")
+	public String payment( @RequestParam("amount")double amount, HttpSession session)
+	{	
+		String email = session.getAttribute("UserEmail").toString();
+		Card card = userService.getCardDetails(email);	
+		double cardBalance;	
+		if(card == null)
+		{
+			cardBalance = 0;
+		}
+		else
+		{
+			cardBalance = card.getCardBalance();
+			if(amount > cardBalance)
+			{
+				cardBalance = cardBalance - amount;
+				card.setCardBalance(cardBalance);
+			}
+		}
+		
+		return "payment";
+	}
 }
