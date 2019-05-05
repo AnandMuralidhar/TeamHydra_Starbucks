@@ -118,5 +118,17 @@ public class HomeController {
 	
 	}
 	
+	@PostMapping("/loginUser")
+	public String loginUser(@RequestParam("emailid")String email,@RequestParam("pwd")String password)
+	{
+		User user = userService.getUser(email,password);
+		
+		if(user == null) {
+			
+			System.out.println("User does not exsist");	
+		}
+		return "dashboard";
+	}
+	
 
 }

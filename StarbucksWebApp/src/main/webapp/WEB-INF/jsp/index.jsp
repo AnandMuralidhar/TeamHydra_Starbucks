@@ -23,7 +23,7 @@
 </div>
 <div class="rightcontent card">
 <div class="loginform">
-<form action="" method="post">
+<form action="/loginUser" method="post">
 <div class="loginelement">
     <input type="text" placeholder="Username or email address" name="emailid" required><br />
    </div>
