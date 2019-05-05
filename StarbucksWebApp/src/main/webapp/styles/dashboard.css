@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.container {
+	height: 100%;
+}
+.header {
+	width: 100%;
+	position: relative;
+	padding: 3%;
+}
+.headerelement {
+	float: left;
+	width: 15%;
+	line-height: 35px;
+}
+a{
+	text-decoration: none;
+}
+
+.suboptions {
+	display: none;
+}
