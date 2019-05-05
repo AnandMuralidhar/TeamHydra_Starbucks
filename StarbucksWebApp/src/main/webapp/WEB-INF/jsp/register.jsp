@@ -4,13 +4,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Register</title>
+<link rel="stylesheet" href="styles/main.css" type="text/css">
 </head>
 <body>
 <div class="container">
+<div class="header">
+<div class="headerelement">
+<img src="resources/images/starbuckshomelogo.png" width="40px" height="40px" />
+</div>
+<div class="headerelement"><a href="/index">Sign in</a></div>
+<div class="headerelement"><a href="/register">Join now</a></div>
+</div><br />
 <form action="/addUser" method="post">	
-
-<h1>Sign Up</h1>
     <p>Please fill in this form to create an account.</p>
      <label for="fname"><b>First Name</b></label>
 	 <input class="input" type="text" name="fname" placeholder="firstname" required/><br/>

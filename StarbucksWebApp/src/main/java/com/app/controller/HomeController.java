@@ -20,6 +20,11 @@ public class HomeController {
 		return "index";
 	}
 	
+	@GetMapping("/index")
+	public String index() {
+		return "index";
+	}
+	
 	@GetMapping("/register")
 	public String register() {
 		return "register";
@@ -38,17 +43,17 @@ public class HomeController {
 			@RequestParam("zipcode") int zipcode, @RequestParam("password") String password)
 	{
 		User user = new User();
-	/*	user.setEmailID(email);
+		user.setEmailID(email);
 		user.setFirstName(fname);
 		user.setLastName(lname);
 		user.setZipCode(zipcode);
-		user.setPassword(password);*/
+		user.setPassword(password);
 		
-		user.setEmailID("abc@gmail.com");
-		user.setFirstName("ABC");
-		user.setLastName("XYZ");
-		user.setZipCode(98);
-		user.setPassword("root");
+//		user.setEmailID("abc@gmail.com");
+//		user.setFirstName("ABC");
+//		user.setLastName("XYZ");
+//		user.setZipCode(98);
+//		user.setPassword("root");
 		
 		
 		if(userService.adduser(user))
@@ -61,5 +66,7 @@ public class HomeController {
 		
 	return "success";
 	}
+	
+	
 
 }
