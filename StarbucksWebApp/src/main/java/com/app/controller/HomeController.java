@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.app.model.Card;
+import com.app.model.Payment;
 import com.app.model.User;
 import com.app.service.UserService;
 
@@ -90,6 +91,17 @@ public class HomeController {
 			System.out.println("Card not added successfully");
 		}
 		
+	}
+	
+	@PostMapping("/payment")
+	public void payment(@RequestParam("paymentId") String paymentId, @RequestParam("cardNumber") String cardNumber,
+			@RequestParam("amount") int amount)
+	{
+		Payment pay = new Payment();
+		pay.setPaymentId(paymentId);
+		pay.setCardNumber(cardNumber);
+		pay.setAmount(amount);	
+	
 	}
 	
 

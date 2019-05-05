@@ -1,9 +1,14 @@
 package com.app.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Payment {
 
+	@Id
 	private String paymentId;
-	private String amount ;
+	private double amount ;
 	private String cardNumber;
 	
 	public String getPaymentId() {
@@ -12,10 +17,10 @@ public class Payment {
 	public void setPaymentId(String paymentId) {
 		this.paymentId = paymentId;
 	}
-	public String getAmount() {
+	public double getAmount() {
 		return amount;
 	}
-	public void setAmount(String amount) {
+	public void setAmount(double amount) {
 		this.amount = amount;
 	}
 	public String getCardNumber() {
