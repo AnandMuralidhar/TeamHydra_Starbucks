@@ -64,11 +64,6 @@ public class HomeController {
 		user.setZipCode(zipcode);
 		user.setPassword(password);
 		
-//		user.setEmailID("abc@gmail.com");
-//		user.setFirstName("ABC");
-//		user.setLastName("XYZ");
-//		user.setZipCode(98);
-//		user.setPassword("root");
 		
 		
 		if(userService.adduser(user))
@@ -138,6 +133,17 @@ public class HomeController {
 	public String logout( HttpSession session) {
 		session.invalidate();
 		return "index";
+
+	@PostMapping("/loginUser")
+	public String loginUser(@RequestParam("emailid")String email,@RequestParam("pwd")String password)
+	{
+		User user = userService.getUser(email,password);
+		
+		if(user == null) {
+			
+			System.out.println("User does not exsist");	
+		}
+		return "dashboard";
 	}
 	
 

@@ -16,3 +16,7 @@ StarbucksWebApp/target/m2e-wtp/web-resources/META-INF/maven/10101/StarbucksWebAp
 *.MF
 *.class
 *.class
+StarbucksWebApp/target/m2e-wtp/web-resources/META-INF/maven/10101/StarbucksWebApp/pom.properties
+StarbucksWebApp/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
+StarbucksWebApp/target/classes/com/app/model/User.class
+StarbucksWebApp/target/classes/com/app/controller/HomeController.class

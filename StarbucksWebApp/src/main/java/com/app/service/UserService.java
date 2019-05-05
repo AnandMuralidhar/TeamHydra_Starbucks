@@ -29,6 +29,17 @@ public class UserService {
 		}
 		return false;
 	}
+
+
+	public User getUser(String email, String password) {
+		
+	User user = userRepository.findUser(email);
+	
+	if (user != null && user.getPassword().equals(password)) {
+		return user;
+		}
+	return null;
+	}
 	
 	
 	/** Adding cards into db*/
