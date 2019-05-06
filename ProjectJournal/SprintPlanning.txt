@@ -1,1 +1,20 @@
-*******************************************Sprint Planning*************************************
+*********************************    Sprint Planning April - 29 - 2019       *************************************
+
+
+Studied and discussed how to implement Starbucks application. 
+
+Discussed potential scenarios and working of application.
+
+Updated Backlog items. 
+
+Divided high level tasks within team members.  
+
+Finalized basic project design :- 
+
+Using Maven Project, Set-up MVC structured project, Versions of tools to be used like IDE, Spring Boot and so on. 
+
+Saylee and Chaitrali worked on Setting Project structure. 
+
+Prathyusha  worked on setting up Database. 
+
+Anand worked on setting up tools and GitHub repos. 
