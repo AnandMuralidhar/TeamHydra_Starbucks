@@ -161,8 +161,9 @@ public class HomeController {
 	}
 	
 	@PostMapping("/payment")
-	public String payment( @RequestParam("amount")double amount, HttpSession session)
+	public String payment( @RequestParam("total")String total, HttpSession session)
 	{	
+		double amount = Double.parseDouble(total);
 		String email = session.getAttribute("UserEmail").toString();
 		Card card = userService.getCardDetails(email);	
 		double cardBalance;	
