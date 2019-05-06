@@ -33,8 +33,7 @@ for(Order usermodel : a)
  <% }%>
 <p>Total: <% out.println(total); %></p>
 <% } %>
-<input type="hidden" name="amount" value=total/>
-<button type="submit">Procedd to checkout</button>
+<button type="submit">Proceed to checkout</button>
 </form>
 </div>
 </div>

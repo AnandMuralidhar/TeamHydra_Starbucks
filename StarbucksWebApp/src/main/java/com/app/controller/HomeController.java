@@ -189,26 +189,26 @@ public class HomeController {
 	}
 	
 	@PostMapping("/payment")
-	public String payment( @RequestParam("total")String total, HttpSession session)
+	public String payment( HttpSession session)
 	{	
+		
+		String total = "5";
 		double amount = Double.parseDouble(total);
 		String email = session.getAttribute("UserEmail").toString();
 		Card card = userService.getCardDetails(email);	
-		double cardBalance;	
-		if(card == null)
-		{
-			cardBalance = 0;
-		}
-		else
-		{
+		double cardBalance = 0.00;	
+		
 			cardBalance = card.getCardBalance();
-			if(amount > cardBalance)
+			if(amount < cardBalance)
 			{
 				cardBalance = cardBalance - amount;
 				card.setCardBalance(cardBalance);
+				userService.addCard(card);
+				session.setAttribute("CardBalance", cardBalance);
+				System.out.println("Updated Card: "+card);
 			}
-		}
+	
 		
-		return "payment";
+		return "dashboard";
 	}
 }
