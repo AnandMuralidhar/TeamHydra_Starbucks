@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.app.model.Card;
 import com.app.model.Order;
-import com.app.model.Payment;
+
 import com.app.model.User;
 import com.app.service.UserService;
 
@@ -62,10 +62,8 @@ public class HomeController {
 		return "order";
 	}
 	
-	@GetMapping("/payments")
-	public String Payments() {
-		return "payments";
-	}
+
+
 
 	@GetMapping("/store")
 	public String Store() {
@@ -135,24 +133,11 @@ public class HomeController {
 	}
 	
 
-	@PostMapping("/payment")
-	public void payment(@RequestParam("paymentId") String paymentId, @RequestParam("cardNumber") String cardNumber,
-			@RequestParam("amount") int amount)
-	{
-		Payment pay = new Payment();
-		pay.setPaymentId(paymentId);
-		pay.setCardNumber(cardNumber);
-		pay.setAmount(amount);	
-	
-	}
+
 	
 	@PostMapping("/createorder")
 	public String createorder(@RequestParam("cappuccino") int cappuccinocount, @RequestParam("latte") int lattecount,
 			@RequestParam("macchiato") int macchiatocount, @RequestParam("mocha") int mochacount, HttpServletRequest request)
-
-	@PostMapping("/order")
-	public void order(@RequestParam("paymentId") String paymentId, @RequestParam("cardNumber") String cardNumber,
-			@RequestParam("amount") int amount)
 	{
 		Map<String, Integer> m = new HashMap<String, Integer>();
 		ArrayList<Order> orderarray = new ArrayList<Order>();
