@@ -1,10 +1,15 @@
 package com.app.service;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.app.model.Card;
 import com.app.model.User;
+import com.app.model.Order;
 import com.app.repository.CardRepository;
 import com.app.repository.UserRepository;
 
@@ -62,6 +67,32 @@ public class UserService {
 
 		}
 		return false;
+	}
+	
+	public ArrayList<Order> createOrder(Map<String, Integer> m) {
+		Order o;
+		ArrayList<Order> orderarray = new ArrayList<Order>();
+		Double price = 0.00;
+		for(Map.Entry<String, Integer> entry : m.entrySet()) {
+			o = new Order();
+			System.out.println("Key" +entry.getKey());
+			if(entry.getValue() != 0) {				
+				switch ( entry.getKey() )
+				{
+				case "Cappucino": price = 3.25; break ;
+				case "Latte": price = 4.25; break ;
+				case "Macchiato": price = 4.00; break ;
+				case "Mocha": price = 3.50; break ;
+				default: price = 0.0; break ;
+				}
+				o.setType(entry.getKey());
+				System.out.println("sub key: " +entry.getKey());
+				o.setCount(entry.getValue());
+				o.setPrice((entry.getValue()*price));
+				orderarray.add(o);
+			}
+		}
+		return orderarray;
 	}
 
 }
