@@ -75,7 +75,6 @@ public class UserService {
 		Double price = 0.00;
 		for(Map.Entry<String, Integer> entry : m.entrySet()) {
 			o = new Order();
-			System.out.println("Key" +entry.getKey());
 			if(entry.getValue() != 0) {				
 				switch ( entry.getKey() )
 				{
@@ -86,7 +85,6 @@ public class UserService {
 				default: price = 0.0; break ;
 				}
 				o.setType(entry.getKey());
-				System.out.println("sub key: " +entry.getKey());
 				o.setCount(entry.getValue());
 				o.setPrice((entry.getValue()*price));
 				orderarray.add(o);

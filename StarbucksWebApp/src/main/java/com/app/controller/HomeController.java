@@ -62,6 +62,11 @@ public class HomeController {
 		return "order";
 	}
 	
+	@GetMapping("/payments")
+	public String Payments() {
+		return "payments";
+	}
+	
 
 
 
@@ -145,10 +150,6 @@ public class HomeController {
 		m.put("Latte", lattecount);
 		m.put("Macchiato", macchiatocount);
 		m.put("Mocha", mochacount);
-		System.out.println(cappuccinocount);
-		System.out.println(lattecount);
-		System.out.println(macchiatocount);
-		System.out.println(mochacount);
 		orderarray = userService.createOrder(m);
 		request.setAttribute("orderlist", orderarray);
 		return "payments";
@@ -174,14 +175,9 @@ public class HomeController {
 		}else
 		{
 			cardBal = card.getCardBalance();
-		}
-		
-		
-		session.setAttribute("CardBalance", cardBal);
-		
-		
-		if(user == null) {
-		
+		}				
+		session.setAttribute("CardBalance", cardBal);				
+		if(user == null) {		
 			return "index";
 		}
 		session.setAttribute("UserEmail", email);
@@ -189,15 +185,13 @@ public class HomeController {
 	}
 	
 	@PostMapping("/payment")
-	public String payment( HttpSession session)
+	public String payment(@RequestParam("total")String total, HttpSession session)
 	{	
-		
-		String total = "5";
 		double amount = Double.parseDouble(total);
 		String email = session.getAttribute("UserEmail").toString();
-		Card card = userService.getCardDetails(email);	
-		double cardBalance = 0.00;	
-		
+		Card card = userService.getCardDetails(email);
+		double cardBalance = 0.00;
+        if( card != null) {
 			cardBalance = card.getCardBalance();
 			if(amount < cardBalance)
 			{
@@ -206,9 +200,9 @@ public class HomeController {
 				userService.addCard(card);
 				session.setAttribute("CardBalance", cardBalance);
 				System.out.println("Updated Card: "+card);
-			}
-	
-		
+			}			
 		return "dashboard";
+	}
+        else { return "addcard"; }
 	}
 }

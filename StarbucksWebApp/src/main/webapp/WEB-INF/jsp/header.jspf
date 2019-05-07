@@ -1,6 +1,5 @@
 <%
  String UserEmail= (String)session.getAttribute("UserEmail");
-System.out.println("emailid: " +UserEmail);
   %>
  <div class="headerelement">
 <img src="resources/images/starbuckshomelogo.png" width="40px" height="40px" />
@@ -12,9 +11,9 @@ System.out.println("emailid: " +UserEmail);
  <ul id="menuoptions" style="display: none;">
  <li><a href="dashboard">Cards</a></li>
  <li><a href="order">Order</a></li>
- <li>Payments</li>
- <li>Rewards</li>
- <li>Stores</li>
+ <li><a href="payments">Payments</a></li>
+ <li><a href="rewards">Rewards</a></li>
+ <li><a href="store">Stores</a></li>
  <li><a href="addcard">Settings</a></li>
  <hr aria-hidden="true">
  <form action="/logout" method="post">

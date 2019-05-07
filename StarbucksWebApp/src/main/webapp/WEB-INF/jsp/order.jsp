@@ -17,10 +17,10 @@
 <%@ include file="header.jspf" %>
 </div>
 <div class="headercontent"> 
-<div class="submenuoptions">Make your day light with coffee...</div>
+<div class="submenuoptions content">Make your day light with coffee...</div>
 </div>
 </div>
-<div>
+
 <div class="rightcontent card">
 <div class="ordercontents">
 <form action="/createorder" method="post">
@@ -35,38 +35,37 @@
 </div>
 
 <div class="coffeeitem">
-<img class="coffeeimg" src="resources/images/cappuccino.jpg" />
+<img class="coffeeimg" src="resources/images/latte.jpg" />
 <div class="coffeename">Latte:</div>
 <div class="inputfields">
-<input type="button" onclick="decrementValue()" value="-" />
+<input type="button" onclick="decrementLatteValue()" value="-" />
    <input type="text" id="lattenumber" name="latte" value="0"/>
-   <input type="button" onclick="incrementValue()" value="+" />
+   <input type="button" onclick="incrementLatteValue()" value="+" />
 </div>
 </div>
 
 
 <div class="coffeeitem">
-<img class="coffeeimg" src="resources/images/cappuccino.jpg" />
+<img class="coffeeimg" src="resources/images/macchiato.jpg" />
 <div class="coffeename">Macchiato:</div>
 <div class="inputfields">
-<input type="button" onclick="decrementValue()" value="-" />
+<input type="button" onclick="decrementMacchiatoValue()" value="-" />
    <input type="text" id="macchiatonumber" name="macchiato" value="0"/>
-   <input type="button" onclick="incrementValue()" value="+" />
+   <input type="button" onclick="incrementMacchiatoValue()" value="+" />
 </div>
 </div>
 
 <div class="coffeeitem">
-<img class="coffeeimg" src="resources/images/cappuccino.jpg" />
+<img class="coffeeimg" src="resources/images/mocha.jpg" />
 <div class="coffeename">Mocha:</div>
 <div class="inputfields">
-<input type="button" onclick="decrementValue()" value="-" />
+<input type="button" onclick="decrementMochaValue()" value="-" />
    <input type="text" id="mochanumber" name="mocha" value="0"/>
-   <input type="button" onclick="incrementValue()" value="+" />
+   <input type="button" onclick="incrementMochaValue()" value="+" />
 </div>
 </div>
-<button type="submit">Order</button>
+<button class="submitbtn" type="submit">Order</button>
 </form>
-</div>
 </div>
 </div>
 </div>

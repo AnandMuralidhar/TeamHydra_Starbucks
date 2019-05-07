@@ -26,16 +26,21 @@
 </ul>
 </div>
 </div>
-<div class="rightcontent card">
-<h1><font color= "black">${ErrorMessage}</font></h1>
-<div class="maincontent">
+<div class="rightcontent card addcard"> 
+<div class="carderror">${ErrorMessage}</div>
 <form action="/addCard" method="post">	
-    <p>Add New Card</p>
-	 <input class="input" type="text" pattern="\d*" maxlength="9" name="cardNumber" placeholder="cardNumber" required/><br/>
-	 <input class="input" type="text" pattern="\d*" maxlength="3" name="cardCode" placeholder="cardCode" required/><br />
-	<button class="submitbtn" type="submit">Add Card</button>		
+    <div class="maincard">
+    <div class="cardleft">
+    <img src="resources/images/starbuckshomelogo.png" width="40px" height="40px" />
+    </div>
+    <div class="cardright">
+	 <input class="cardinput" type="text" pattern="\d*" maxlength="9" name="cardNumber" placeholder="Starbucks Card number" required/><br/>
+	 <input class="cardinput" type="text" pattern="\d*" maxlength="3" name="cardCode" placeholder="Security code" required/><br />
+	</div>
+	<div class="cardbottom"></div>
+	</div>
+	<button style=" margin-right: 10%;" class="submitbtn" type="submit">Add Card</button>		
 </form>
-</div>
 </div>
 </div>	
 </body>
