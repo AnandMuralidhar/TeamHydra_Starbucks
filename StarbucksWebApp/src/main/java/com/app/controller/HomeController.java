@@ -109,10 +109,22 @@ public class HomeController {
 		
 		if(cardNumber.length() == 9 && cardCode.length() == 3)
 		{
+			Card oldcard = userService.getCardDetails(emailID);
+			if(oldcard == null) {
 			card.setCardNumber(cardNumber);
 			card.setCardCode(cardCode);
 			card.setEmailID(emailID);
 			card.setCardBalance(20);
+			
+			}
+			else {
+				if(userService.deleteCard(emailID)) {
+				card.setCardNumber(cardNumber);
+				card.setCardCode(cardCode);
+				card.setEmailID(emailID);
+				card.setCardBalance(20);
+				}
+		}
 		}else
 		{
 			model.addAttribute("ErrorMessage", "Card Number / Card Code is not valid");
@@ -121,6 +133,19 @@ public class HomeController {
 
 		if(userService.addCard(card))
 		{
+			Card newcard = userService.getCardDetails(emailID);
+			
+			double cardBal;
+			
+			if(card == null)
+			{
+				cardBal = 0;
+			}else
+			{
+				cardBal = card.getCardBalance();
+			}				
+			session.setAttribute("CardBalance", cardBal);
+			
 			System.out.println("Card added successfully");
 		}else
 		{
@@ -129,6 +154,8 @@ public class HomeController {
 		return "dashboard";
 		
 	}
+	
+
 		
 	@PostMapping("/createorder")
 	public String createorder(@RequestParam("cappuccino") int cappuccinocount, @RequestParam("latte") int lattecount,
@@ -152,7 +179,7 @@ public class HomeController {
 	}
 
 	@PostMapping("/loginUser")
-	public String loginUser(@RequestParam("emailid")String email,@RequestParam("pwd")String password, HttpSession session)
+	public String loginUser(@RequestParam("emailid")String email,@RequestParam("pwd")String password, HttpSession session, ModelMap model)
 	{
 		User user = userService.getUser(email,password);
 		Card card = userService.getCardDetails(email);
@@ -168,6 +195,7 @@ public class HomeController {
 		}				
 		session.setAttribute("CardBalance", cardBal);				
 		if(user == null) {		
+			model.addAttribute("ErrorMessage", "Invalid username or password Please try again");
 			return "index";
 		}
 		session.setAttribute("UserEmail", email);

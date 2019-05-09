@@ -6,9 +6,9 @@ import javax.persistence.Id;
 @Entity
 public class Card{	
 	@Id
+	private String emailID;
 	private String cardNumber;
 	private String cardCode;
-	private String emailID;
 	private double cardBalance;
 	
 	public String getCardNumber() {

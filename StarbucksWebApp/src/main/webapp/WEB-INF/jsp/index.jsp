@@ -23,6 +23,7 @@
 </div>
 <div class="rightcontent card">
 <div class="loginform">
+<div class="error" style="color: #e75b52;">${ErrorMessage}</div>
 <form action="/loginUser" method="post">
 <div class="loginelement">
     <input type="text" placeholder="Username or email address" name="emailid" required><br />

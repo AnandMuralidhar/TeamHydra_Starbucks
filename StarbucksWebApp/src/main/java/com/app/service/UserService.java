@@ -78,4 +78,15 @@ public class UserService {
 		}
 		return orderarray;
 	}
+	
+	public boolean deleteCard(String emailId) {
+		try {
+			cardRepository.deleteById(emailId);
+			return true;
+		} catch (Exception e) {
+
+		}
+		return false;
+		
+	}
 }
