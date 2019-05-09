@@ -25,8 +25,7 @@ public class HomeController {
 	
 	@Autowired
 	private UserService userService;
-	
-	
+		
 	@GetMapping("/")
 	public String start() {
 		return "index";
@@ -41,7 +40,6 @@ public class HomeController {
 	public String register() {
 		return "register";
 	}
-	
 	
 	@GetMapping("/success")
 	public String success() {
@@ -67,9 +65,6 @@ public class HomeController {
 		return "payments";
 	}
 	
-
-
-
 	@GetMapping("/store")
 	public String Store() {
 		return "store";
@@ -105,8 +100,6 @@ public class HomeController {
 	return "dashboard";
 	}
 	
-	
-
 	@PostMapping("/addCard")
 	public String addCard(@RequestParam("cardNumber") String cardNumber, @RequestParam("cardCode") String cardCode, ModelMap model, HttpSession session)
 	{
@@ -136,10 +129,7 @@ public class HomeController {
 		return "dashboard";
 		
 	}
-	
-
-
-	
+		
 	@PostMapping("/createorder")
 	public String createorder(@RequestParam("cappuccino") int cappuccinocount, @RequestParam("latte") int lattecount,
 			@RequestParam("macchiato") int macchiatocount, @RequestParam("mocha") int mochacount, HttpServletRequest request)
@@ -202,7 +192,7 @@ public class HomeController {
 				System.out.println("Updated Card: "+card);
 			}			
 		return "dashboard";
-	}
+	} 
         else { return "addcard"; }
 	}
 }
