@@ -1,12 +1,9 @@
 package com.app.service;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.app.model.Card;
 import com.app.model.User;
 import com.app.model.Order;
@@ -18,13 +15,11 @@ public class UserService {
 	
 	@Autowired
 	private UserRepository userRepository;
-	
-	
+		
 	@Autowired
 	private CardRepository cardRepository;
-	
-	
-	/** Adding users into db*/
+		
+	/** Adding users into database*/
 	public boolean adduser(User user) {
 		try {
 			userRepository.save(user);
@@ -35,37 +30,28 @@ public class UserService {
 		return false;
 	}
 
-
-	public User getUser(String email, String password) {
-		
+	public User getUser(String email, String password) {	
 	User user = userRepository.findUser(email);
-	
 	if (user != null && user.getPassword().equals(password)) {
 		return user;
 		}
 	return null;
 	}
 	
-	
 	public Card getCardDetails(String email) {
-
 		Card card = cardRepository.getCardDetails(email);
-
 		if (card != null) {
 			return card;
 		}
 		return null;
 	}
 	
-	
 	/** Adding cards into db*/
 	public boolean addCard(Card card) {
 		try {
 			cardRepository.save(card);
 			return true;
-		} catch (Exception e) {
-
-		}
+		} catch (Exception e) { }
 		return false;
 	}
 	
@@ -92,5 +78,4 @@ public class UserService {
 		}
 		return orderarray;
 	}
-
 }

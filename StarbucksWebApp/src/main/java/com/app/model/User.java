@@ -61,14 +61,9 @@ public class User{
 		this.password = password;
 	}
 
-
 	@Override
 	public String toString() {
 		return "User [emailID=" + emailID + ", firstName=" + firstName + ", lastName=" + lastName + ", zipCode="
 				+ zipCode + ", password=" + password + "]";
 	}
-	
-	
-	
-
 }

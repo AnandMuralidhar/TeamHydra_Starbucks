@@ -4,8 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Card{
-	
+public class Card{	
 	@Id
 	private String cardNumber;
 	private String cardCode;
