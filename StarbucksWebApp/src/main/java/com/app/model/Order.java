@@ -1,7 +1,6 @@
 package com.app.model;
 
 public class Order {
-
 	private String type;
 	private int count;
 	private double price;
