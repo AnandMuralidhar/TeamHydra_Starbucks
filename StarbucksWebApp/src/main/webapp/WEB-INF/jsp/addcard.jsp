@@ -26,7 +26,8 @@
 </ul>
 </div>
 </div>
-<div class="rightcontent card addcard"> 
+<div class="rightcontent card addcard">
+<div class="carderror">${addCardMessage}</div> 
 <div class="carderror">${ErrorMessage}</div>
 <form action="/addCard" method="post">	
     <div class="maincard">

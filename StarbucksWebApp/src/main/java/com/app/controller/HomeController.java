@@ -9,7 +9,6 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -106,7 +105,7 @@ public class HomeController {
 	}
 	
 	@PostMapping("/addCard")
-	public String addCard(@RequestParam("cardNumber") String cardNumber, @RequestParam("cardCode") String cardCode, ModelMap model, HttpSession session)
+	public String addCard(@RequestParam("cardNumber") String cardNumber, @RequestParam("cardCode") String cardCode, HttpServletRequest request, HttpSession session)
 	{
 		Card card = new Card();
 		String emailID = (String) session.getAttribute("UserEmail");
@@ -132,7 +131,7 @@ public class HomeController {
 		}
 		}else
 		{
-			model.addAttribute("ErrorMessage", "Card Number / Card Code is not valid");
+			request.setAttribute("ErrorMessage", "Card Number / Card Code is not valid");
 			return "addcard";
 		}		
 
@@ -184,7 +183,7 @@ public class HomeController {
 	}
 
 	@PostMapping("/loginUser")
-	public String loginUser(@RequestParam("emailid")String email,@RequestParam("pwd")String password, HttpSession session, ModelMap model)
+	public String loginUser(@RequestParam("emailid")String email,@RequestParam("pwd")String password, HttpSession session, HttpServletRequest request)
 	{
 		User user = userService.getUser(email,password);
 		Card card = userService.getCardDetails(email);
@@ -200,7 +199,7 @@ public class HomeController {
 		}				
 		session.setAttribute("CardBalance", cardBal);				
 		if(user == null) {		
-			model.addAttribute("ErrorMessage", "Invalid username or password Please try again");
+			request.setAttribute("ErrorMessage", "Invalid username or password. Please try again");
 			return "index";
 		}
 		session.setAttribute("UserEmail", email);
@@ -208,7 +207,7 @@ public class HomeController {
 	}
 	
 	@PostMapping("/payment")
-	public String payment(@RequestParam("total")String total, HttpSession session, ModelMap model)
+	public String payment(@RequestParam("total")String total, HttpSession session, HttpServletRequest request)
 	{	
 		double amount = Double.parseDouble(total);
 		String email = session.getAttribute("UserEmail").toString();
@@ -221,16 +220,19 @@ public class HomeController {
 				cardBalance = cardBalance - amount;
 				card.setCardBalance(cardBalance);
 				userService.addCard(card);
-				model.addAttribute("SuccessMessage", "Order placed successfully!");
-				session.setAttribute("CardBalance", cardBalance);
+				request.setAttribute("SuccessMessage", "Order placed successfully!");
+				request.setAttribute("CardBalance", cardBalance);
 				System.out.println("Updated Card: "+card);
 			}
 			else {
-				model.addAttribute("ErrorMessage", "Insufficient Funds/Unable to place order");
+				request.setAttribute("ErrorMessage", "Insufficient Funds/Unable to place order");
 			}
 		return "dashboard";
 	} 
-       else { return "addcard"; }
+       else { 
+    	   request.setAttribute("addCardMessage", "Please add card to place order.");
+    	   return "addcard"; 
+    	   }
 	}
 	
 	@PostMapping("/userprofile")
