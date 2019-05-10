@@ -39,12 +39,11 @@ Implemented REST APIs
 
 5. Presentation Slide Deck:- https://github.com/vsaylee4/TeamHydra_Starbucks/blob/master/images/Starbucks.pptx
 
-Project Board 
+6. Project Board:- https://github.com/vsaylee4/TeamHydra_Starbucks/tree/master/ProjectBoard
 
-Screen Shots:- https://github.com/vsaylee4/TeamHydra_Starbucks/tree/master/images 
+7. Screen Shots:- https://github.com/vsaylee4/TeamHydra_Starbucks/tree/master/images 
 
-UI Wireframes:- https://github.com/vsaylee4/TeamHydra_Starbucks/tree/master/UI_Wireframes
-
+8. UI Wireframes:- https://github.com/vsaylee4/TeamHydra_Starbucks/tree/master/UI_Wireframes
 
 
 ## Team Member Contribution
