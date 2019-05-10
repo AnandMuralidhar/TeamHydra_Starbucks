@@ -23,7 +23,7 @@
 </div>
 <div class="rightcontent card">
 <div style =" text-align: center;
-    margin-top: 40%;"><h1>No rewards</h1> </div>
+    margin-top: 40%;"><h1>Order more to earn rewards...</h1> </div>
 </div>
 </div>
 </body>

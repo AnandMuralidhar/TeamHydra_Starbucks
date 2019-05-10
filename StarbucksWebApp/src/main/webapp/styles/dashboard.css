@@ -1,56 +1,3 @@
-/* @charset "UTF-8"; */
-
-/* .container { */
-/* 	height: 100%; */
-/* } */
-/* .header { */
-/* 	width: 100%; */
-/* 	position: relative; */
-/* 	padding: 3%; */
-/* } */
-/* .headerelement { */
-/* 	float: left; */
-/* 	width: 10%; */
-/* 	line-height: 35px; */
-/* 	text-align: center; */
-/* } */
-/* a{ */
-/* 	color: #000000; */
-/* 	text-decoration: none; */
-/* } */
-
-/* #settingssuboptions { */
-/* 	display: none; */
-/* } */
-/* #rewardssuboptions { */
-/* 	display: none; */
-/* } */
-/* #paymentssuboptions { */
-/* 	display: none; */
-/* } */
-/* #mycardssuboptions { */
-/* 	display: none; */
-/* } */
-/* ul { */
-/* 	list-style: none; */
-/* } */
-/* li { */
-/*  margin-left: -40px; */
-/* } */
-
-/* .maincontent { */
-/* 	position: absolute; */
-/* } */
-/* input { */
-/* 	font-size: 18px; */
-/*   border: 0; */
-/*   outline: 0; */
-/*   width: 50%; */
-/*   background: transparent; */
-/*   border-bottom: 1px solid black; */
-/*   padding: 0.5%; */
-/* }  */
-
 html, body {
   height: 100%;
   margin: 0;
@@ -111,7 +58,7 @@ li {
 	padding: 10px;
 }
 hr {
-	width: 50%;
+	width: 80%;
 	margin-left: 0;
 }
 .headercontent {
@@ -252,5 +199,13 @@ input {
     position: absolute;
     margin-left: 17%;
     color: #e75b52;
+}
+.signout {
+	float: left;
+	margin-left: 25%;
+}
+.userdetails {
+	    margin-top: 30%;
+    text-align: center;
 }
 

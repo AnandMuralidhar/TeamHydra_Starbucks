@@ -89,4 +89,15 @@ public class UserService {
 		return false;
 		
 	}
+	
+	public User getUserDetails(String emailId) {
+		try {
+			User user = userRepository.getUserDetails(emailId);
+			return user;
+		} catch (Exception e) {
+
+		}
+		return null;
+		
+	}
 }

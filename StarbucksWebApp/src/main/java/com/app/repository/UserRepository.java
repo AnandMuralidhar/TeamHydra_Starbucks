@@ -10,4 +10,8 @@ import com.app.model.User;
 public interface UserRepository  extends JpaRepository<User,String>{
 	@Query("SELECT u FROM User u WHERE LOWER(u.emailID) = LOWER(:emailID)")
 	  public  User findUser(@Param("emailID") String emailID);
+	
+	@Query("SELECT u FROM User u WHERE LOWER(u.emailID) = LOWER(:emailID)")
+	  public  User getUserDetails(@Param("emailID") String emailID);
+	
 }

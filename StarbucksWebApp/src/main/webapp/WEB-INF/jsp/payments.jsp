@@ -31,14 +31,13 @@
 double total = 0.00;
  if(request.getAttribute("orderlist") != null)
  {
- ArrayList<Order> a = (ArrayList<Order>)request.getAttribute("orderlist"); 
- System.out.println(a);  %>
+ ArrayList<Order> a = (ArrayList<Order>)request.getAttribute("orderlist");  %>
  <div class="printreceipt">
-<%for(Order usermodel : a)
+<%for(Order order : a)
  { 
 %>
-	<p><%out.println(usermodel.getType()); %> x <%out.println(usermodel.getCount()); %> = <%out.println(usermodel.getPrice()); %></p>
-	<% total += usermodel.getPrice();%>									
+	<p><%out.println(order.getType()); %> x <%out.println(order.getCount()); %> = <%out.println(order.getPrice()); %></p>
+	<% total += order.getPrice();%>									
 
 
  <% }%>

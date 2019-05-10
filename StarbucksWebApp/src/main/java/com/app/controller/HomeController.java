@@ -75,6 +75,11 @@ public class HomeController {
 		return "rewards";
 	}
 	
+	@GetMapping("/profile")
+	public String Profile() {
+		return "profile";
+	}
+	
 	@PostMapping("/addUser")
 	public String addUser(@RequestParam("email") String email, @RequestParam("fname") String fname, @RequestParam("lname") String lname,
 			@RequestParam("zipcode") int zipcode, @RequestParam("password") String password, HttpSession session)
@@ -211,7 +216,7 @@ public class HomeController {
 		double cardBalance = 0.00;
         if( card != null) {
 			cardBalance = card.getCardBalance();
-			if(amount < cardBalance)
+			if((amount < cardBalance) && amount > 0)
 			{
 				cardBalance = cardBalance - amount;
 				card.setCardBalance(cardBalance);
@@ -227,4 +232,24 @@ public class HomeController {
 	} 
        else { return "addcard"; }
 	}
+	
+	@PostMapping("/userprofile")
+	public String profile(HttpSession session)
+	{	
+		String email = session.getAttribute("UserEmail").toString();
+		User user = userService.getUserDetails(email);
+		ArrayList<User> userarray= new ArrayList<User>();
+		if(user != null) {
+			userarray.add(user);
+			System.out.println(userarray.size());
+			session.setAttribute("userProfile", userarray);
+			}
+		Card card = userService.getCardDetails(email);
+		if(card != null) {
+			String cardNumber = card.getCardNumber();
+			session.setAttribute("cardNumber", cardNumber);
+		}
+		return "profile";
+	}
+	
 }
