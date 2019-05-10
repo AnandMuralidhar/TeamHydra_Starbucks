@@ -1,0 +1,31 @@
+﻿Sprint Planning May- 03- 2019 
+
+ 
+
+##Decisions  
+
+Code Deployment in AWS using EBS with Auto scaling and load balancer 
+
+Integration testing and unit testing for complete work flow. 
+
+Documentation – Architecture Diagrams , readme  file  
+
+Demo Presentation  
+
+Code review  
+
+Implementation of orders API  
+
+Integrate third party google API for stores location 
+
+ 
+
+Anand works on unit testing and Integrate third party google maps API for stores. Work on Front-End.
+
+Chaitrali and Saylee works on Code Deployment in AWS using EBS with Auto scaling and load balancer.
+
+Prathyusha works on Implementation of orders API.
+
+Saylee Works on Integration testing and unit testing for complete work flow. 
+
+Chaitrali works on Code review.
