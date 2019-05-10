@@ -1,20 +1,15 @@
 # CMPE202 Starbucks Project : Team Hydra
 Project Decisions:
 
-> Project is built using MVC design pattern. 
+Project is built using MVC design pattern. 
 
-> Used Spring Boot Maven to get an executable WAR file. 
+Used Spring Boot Maven to get an executable WAR file. 
 
-> Created web UI to display work flow. 
+Created web UI to display work flow. 
 
-> Deployed on Cloud using ElasticBeanStalk, Auto Scale Group and Ro. 
+Deployed on Cloud using ElasticBeanStalk, Auto Scale Group and Ro. 
 
-> Implemented REST APIs 
-
-
-<br /><br /><br />
-## Links:
-1. [Demo](https://youtu.be/4YCAaoqBXl4)
+Implemented REST APIs 
 
 
 <br /><br /><br />
@@ -35,10 +30,5 @@ Project Decisions:
 <br /><br /><br />
 
 <br /><br /><br />
-## AWS AutoScaling Configuration:
-![AWS AutoscalingEBS](/images/AutoscalingEBS.png)
-<br /><br /><br />
-
-## Elastic Beanstalk:
-![Elastic Beanstalk](/images/ElasticBeanstalk.png)
-<br /><br /><br />
+## Links:
+1. [Demo](https://youtu.be/4YCAaoqBXl4)
