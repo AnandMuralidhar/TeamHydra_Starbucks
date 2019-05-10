@@ -15,13 +15,11 @@ Implemented REST APIs
 <br /><br /><br />
 ## Architecture Diagram
 ![Arch](/images/arch.PNG)
-<br /><br /><br />
 
 
 <br /><br /><br />
 ## Component Diagram
 ![Component](/images/ComponentDiagram.png)
-<br /><br /><br />
 
 
 <br /><br /><br />
@@ -32,22 +30,22 @@ Implemented REST APIs
 <br /><br /><br />
 ## Links
 1. [Demo](https://youtu.be/4YCAaoqBXl4)
-GitHub Repository:- https://github.com/vsaylee4/TeamHydra_Starbucks
 
-Project Journal:- https://github.com/vsaylee4/TeamHydra_Starbucks/tree/master/ProjectJournal
+2. GitHub Repository:- https://github.com/vsaylee4/TeamHydra_Starbucks
 
-Sprint Task Sheet:- https://github.com/vsaylee4/TeamHydra_Starbucks/blob/master/ProjectJournal/Sprint%20Task%20Sheet%20-%20Team%20Hyrda.xlsx
+3. Project Journal:- https://github.com/vsaylee4/TeamHydra_Starbucks/tree/master/ProjectJournal
 
-Presentation Slide Deck  
+4. Sprint Task Sheet:- https://github.com/vsaylee4/TeamHydra_Starbucks/blob/master/ProjectJournal/Sprint%20Task%20Sheet%20-%20Team%20Hyrda.xlsx
 
-Project Board 
+5. Presentation Slide Deck:- https://github.com/vsaylee4/TeamHydra_Starbucks/blob/master/images/Starbucks.pptx
 
-Screen Shots:- https://github.com/vsaylee4/TeamHydra_Starbucks/tree/master/images 
+6. Project Board:- https://github.com/vsaylee4/TeamHydra_Starbucks/tree/master/ProjectBoard
 
-UI Wireframes:- https://github.com/vsaylee4/TeamHydra_Starbucks/tree/master/UI_Wireframes
+7. Screen Shots:- https://github.com/vsaylee4/TeamHydra_Starbucks/tree/master/images 
 
+8. UI Wireframes:- https://github.com/vsaylee4/TeamHydra_Starbucks/tree/master/UI_Wireframes
 
-
+<br /><br />
 ## Team Member Contribution
 
 ### Anand Muralidhara (013752622)
@@ -93,12 +91,12 @@ Worked on Documentation and presentation.
 
 Performed integration testing to testrd complete work flow.
 
-
+<br /><br />
 ## BurnDown Chart
 
+![Burndown](/images/BurndownChart.jpg)
 
-
-
+<br /><br />
 ## Cloud Deployment
 
 Deployed on AWS Cloud using EBS. 
@@ -107,7 +105,7 @@ Enabled Auto Scaling up to 3 instances and used ELB for load balancing.
 
 Added Alerts for status updates.
 
-
+<br /><br />
 ## Feature Set
 
 New user can create new account using “Join Now”. New record is created is created in RDS. If username is already present in database, then join now is restricted.  
@@ -122,8 +120,7 @@ Payment for the order can be done through payments.
 
 User can log out of application using Sign Out.
 
-
-
+<br /><br />
 ## Steps to run project 
 
 Download code form GitHub 
