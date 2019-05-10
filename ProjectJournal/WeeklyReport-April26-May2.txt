@@ -1,0 +1,72 @@
+*********************************    Weekly Report April 26th   -  May 2nd 2019   *************************************
+=====================================================
+Anand:
+
+What was done?
+> Initial project setup and repo.
+> Worked on Payments API. 
+> Worked on front-end design.
+
+What is planned for next week?
+> Work on Store API.
+> Test Payments Flow 
+> Continue on front-end design.
+> Generate Burndown chart.
+
+Was there any block?
+> Dependency on Order API. 
+
+=====================================================
+Chaitrali:
+
+What was done?
+> Worked on Add Cards API. 
+> Worked on analysis of AWS.
+> Setup AWS services
+
+What is planned for next week?
+> Test workflow for Add Card
+> Documentation
+> AWS deployment
+
+Was there any block?
+> Waiting for Front-End completion to check flow.
+
+=====================================================
+Prathyusha:
+
+What was done?
+> Worked on Managed Order API
+> Worked on front-end design.
+
+What is planned for next week?
+> Test Managed Order
+> Continue on front-end design.
+> Work on Presentation
+
+Was there any block?
+> Nothing
+
+=====================================================
+Saylee:
+
+What was done?
+> Worked on Authentication API. 
+> Worked on AWS services.
+> Maintain journal.
+
+What is planned for next week?
+> Test Authentication Flow 
+> Work on deployment.
+
+Was there any block?
+> Nothing
+
+======================================================
+XP Core Values:
+Communication:
+Team members held a scrum meeting on a daily basis and communicated what was going on.
+Respect:
+Each team member respected other's work and suggestions.
+Feedback:
+Code reviews were done and feedbacks were taken.
