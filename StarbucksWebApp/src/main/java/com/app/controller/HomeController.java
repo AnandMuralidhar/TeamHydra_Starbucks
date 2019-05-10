@@ -223,7 +223,7 @@ public class HomeController {
 				card.setCardBalance(cardBalance);
 				userService.addCard(card);
 				request.setAttribute("SuccessMessage", "Order placed successfully!");
-				request.setAttribute("CardBalance", cardBalance);
+				session.setAttribute("CardBalance", cardBalance);
 				System.out.println("Updated Card: "+card);
 			}
 			else {
