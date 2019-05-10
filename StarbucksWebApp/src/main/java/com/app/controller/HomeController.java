@@ -203,7 +203,7 @@ public class HomeController {
 	}
 	
 	@PostMapping("/payment")
-	public String payment(@RequestParam("total")String total, HttpSession session)
+	public String payment(@RequestParam("total")String total, HttpSession session, ModelMap model)
 	{	
 		double amount = Double.parseDouble(total);
 		String email = session.getAttribute("UserEmail").toString();
@@ -216,9 +216,13 @@ public class HomeController {
 				cardBalance = cardBalance - amount;
 				card.setCardBalance(cardBalance);
 				userService.addCard(card);
+				model.addAttribute("SuccessMessage", "Order placed successfully!");
 				session.setAttribute("CardBalance", cardBalance);
 				System.out.println("Updated Card: "+card);
-			}			
+			}
+			else {
+				model.addAttribute("ErrorMessage", "Insufficient Funds/Unable to place order");
+			}
 		return "dashboard";
 	} 
        else { return "addcard"; }
