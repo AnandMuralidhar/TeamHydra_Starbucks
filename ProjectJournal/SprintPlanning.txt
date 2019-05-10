@@ -17,4 +17,4 @@ Saylee and Chaitrali worked on Setting Project structure.
 
 Prathyusha  worked on setting up Database. 
 
-Anand worked on setting up tools and GitHub repos. 
+Anand worked on analysis of API requirements, setting up IDE, AWS services and GitHub repos. 
