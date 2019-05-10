@@ -1,0 +1,65 @@
+*********************************    Weekly Report May 3rd   -  May 9th 2019   *************************************
+=====================================================
+Anand:
+
+What was done?
+> Worked on Store API. 
+> Worked on front-end design.
+> Test Payments and Store
+
+What is planned for next week?
+> N/A
+
+Was there any block?
+> Nothing
+
+=====================================================
+Chaitrali:
+
+What was done?
+> Worked on AddCard and Testing the flow
+> AWS deployment
+> Presentation
+
+What is planned for next week?
+> N/A
+
+Was there any block?
+> Nothing
+
+=====================================================
+Prathyusha:
+
+What was done?
+> Test Managed Order API
+> Front-end
+> Presentation
+
+What is planned for next week?
+> N/A
+
+Was there any block?
+> Nothing
+
+=====================================================
+Saylee:
+
+What was done?
+> Test Authentication API. 
+> Worked on AWS services.
+> Maintain journal.
+
+What is planned for next week?
+> N/A
+
+Was there any block?
+> Nothing
+
+======================================================
+XP Core Values:
+Communication:
+Team members held a scrum meeting on a daily basis and communicated what was going on.
+Respect:
+Each team member respected other's work and suggestions.
+Feedback:
+Code reviews were done and feedbacks were taken.
