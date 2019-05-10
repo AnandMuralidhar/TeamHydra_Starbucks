@@ -23,7 +23,9 @@
 </div>
 <div class="rightcontent card">
 <div style =" text-align: center;
-    margin-top: 40%;"><h1>Nearby Starbucks stores</h1> </div>
+    margin-top: 10%;"><h1>Nearby Starbucks stores</h1> 
+    <iframe width="600" height="450" frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/search?q=Starbucks&key=INSERT_API_KEY" allowfullscreen></iframe></div>
 </div>
 </div>
 </body>
