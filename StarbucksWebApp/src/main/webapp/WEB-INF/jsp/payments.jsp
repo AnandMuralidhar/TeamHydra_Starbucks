@@ -47,7 +47,7 @@ double total = 0.00;
 <button class="submitbtn" type="submit">Proceed to checkout</button>
 <% } else { %>
 	<div style =" text-align: center;
-    margin-top: 40%;"><h1>Order first to pay</h1> </div>
+    margin-top: 40%;"><h1>Place an order to pay...</h1> </div>
 <%  }%>
 
 </form>

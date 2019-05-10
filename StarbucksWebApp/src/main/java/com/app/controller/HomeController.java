@@ -81,7 +81,7 @@ public class HomeController {
 	
 	@PostMapping("/addUser")
 	public String addUser(@RequestParam("email") String email, @RequestParam("fname") String fname, @RequestParam("lname") String lname,
-			@RequestParam("zipcode") int zipcode, @RequestParam("password") String password, HttpSession session)
+			@RequestParam("zipcode") int zipcode, @RequestParam("password") String password, HttpSession session, HttpServletRequest request)
 	{
 		User user = new User();
 		user.setEmailID(email);
@@ -95,13 +95,15 @@ public class HomeController {
 		if(userService.adduser(user))
 		{
 			session.setAttribute("UserEmail", user.getEmailID());
+			request.setAttribute("SuccessMessage","Registration successful!");
 			System.out.println("User added successfully");
+			return "index";
 		}else
 		{
 			System.out.println("User not added successfully");
+			request.setAttribute("ErrorMessage","Registration failed!");
+			return "register";
 		}
-		
-	return "dashboard";
 	}
 	
 	@PostMapping("/addCard")

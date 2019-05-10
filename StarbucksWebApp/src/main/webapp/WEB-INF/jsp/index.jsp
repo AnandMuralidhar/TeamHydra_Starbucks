@@ -23,7 +23,10 @@
 </div>
 <div class="rightcontent card">
 <div class="loginform">
-<div class="error" style="color: #e75b52;">${ErrorMessage}</div>
+<div class="error" style="color: #4F8A10;"><% if(request.getAttribute("SuccessMessage") != null) { %><%= request.getAttribute("SuccessMessage") %>
+<%} %></div>
+<div class="error" style="color: #e75b52;"><% if(request.getAttribute("ErrorMessage") != null) { %><%= request.getAttribute("ErrorMessage") %>
+<%} %></div>
 <form action="/loginUser" method="post">
 <div class="loginelement">
     <input type="text" placeholder="Username or email address" name="emailid" required><br />

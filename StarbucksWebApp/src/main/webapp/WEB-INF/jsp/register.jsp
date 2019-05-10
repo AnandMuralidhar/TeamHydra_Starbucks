@@ -23,6 +23,8 @@
 </div>
 <div class="rightcontent card">
 <div class="registerform">
+<div class="error" style="color: #e75b52;"><% if(request.getAttribute("ErrorMessage") != null) { %><%= request.getAttribute("ErrorMessage") %>
+<%} %></div>
 <form action="/addUser" method="post">	
     <p>PERSONAL INFORMATION</p>
      <div class="loginelement">

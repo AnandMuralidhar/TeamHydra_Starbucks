@@ -24,9 +24,12 @@
 </div>
 <div class="rightcontent card">
 <div class="cardbalance">
-<div class="success" style="color: #4F8A10;">${SuccessMessage}</div>
-<div class="error" style="color: #e75b52;">${ErrorMessage}</div>
-<h1>Card Balance: ${CardBalance}$</h1>
+<div class="success" style="color: #4F8A10;"><% if(request.getAttribute("SuccessMessage") != null) { %><%= request.getAttribute("SuccessMessage") %>
+<%} %></div>
+<div class="error" style="color: #e75b52;"><% if(request.getAttribute("ErrorMessage") != null) { %><%= request.getAttribute("ErrorMessage") %>
+<%} %></div>
+<h1>Card Balance: $<% if(session.getAttribute("CardBalance") != null) { %><%= session.getAttribute("CardBalance") %>
+<%} %></h1>
 </div>
 </div>
 </div>

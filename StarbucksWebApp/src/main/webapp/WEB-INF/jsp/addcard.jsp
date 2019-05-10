@@ -27,8 +27,10 @@
 </div>
 </div>
 <div class="rightcontent card addcard">
-<div class="carderror">${addCardMessage}</div> 
-<div class="carderror">${ErrorMessage}</div>
+<div class="carderror"><% if(request.getAttribute("addCardMessage") != null) { %><%= request.getAttribute("addCardMessage") %>
+<%} %></div> 
+<div class="carderror"><% if(request.getAttribute("ErrorMessage") != null) { %><%= request.getAttribute("ErrorMessage") %>
+<%} %></div>
 <form action="/addCard" method="post">	
     <div class="maincard">
     <div class="cardleft">
