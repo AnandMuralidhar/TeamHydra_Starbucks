@@ -23,3 +23,12 @@ CMPE 202 team project
 ## AWS Deployment Diagram:
 ![AWS Deployment](/images/AWSDeploymentDiag.PNG)
 <br /><br /><br />
+
+<br /><br /><br />
+## AWS AutoScaling Configuration:
+![AWS AutoscalingEBS](/images/AutoscalingEBS.png)
+<br /><br /><br />
+
+## Elastic Beanstalk:
+![Elastic Beanstalk](/images/ElasticBeanstalk.png)
+<br /><br /><br />
