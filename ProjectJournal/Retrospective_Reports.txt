@@ -1,0 +1,11 @@
+Retrospective Reports
+
+Sprint 1: 
+All the team members worked with each other in good harmony and communicated with each other and shared feedback.
+Major decisions were taken regarding project implementation which worked fine.
+Few requirements changed during sprint, so we need to push some tasks to second sprint.
+
+Sprint 2:
+Team collaboration has improved a lot than the first sprint.
+Blocking issues were resolved.
+We deployed our project successfully on AWS.
