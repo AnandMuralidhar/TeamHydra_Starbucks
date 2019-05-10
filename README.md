@@ -13,3 +13,9 @@ CMPE 202 team project
 ## Component Diagram:
 ![Component](/images/ComponentDiagram.png)
 <br /><br /><br />
+
+
+<br /><br /><br />
+## AWS Deployment Diagram:
+![AWS Deployment](/images/AWSDeploymentDiag.PNG)
+<br /><br /><br />
