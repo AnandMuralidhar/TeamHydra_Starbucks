@@ -1,5 +1,15 @@
-# TeamHydra_Starbucks
-CMPE 202 team project
+# CMPE202 Starbucks Project : Team Hydra
+Project Decisions:
+
+> Project is built using MVC design pattern. 
+
+> Used Spring Boot Maven to get an executable WAR file. 
+
+> Created web UI to display work flow. 
+
+> Deployed on Cloud using ElasticBeanStalk, Auto Scale Group and Ro. 
+
+> Implemented REST APIs 
 
 
 <br /><br /><br />
