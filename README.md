@@ -15,13 +15,11 @@ Implemented REST APIs
 <br /><br /><br />
 ## Architecture Diagram
 ![Arch](/images/arch.PNG)
-<br /><br /><br />
 
 
 <br /><br /><br />
 ## Component Diagram
 ![Component](/images/ComponentDiagram.png)
-<br /><br /><br />
 
 
 <br /><br /><br />
@@ -32,13 +30,14 @@ Implemented REST APIs
 <br /><br /><br />
 ## Links
 1. [Demo](https://youtu.be/4YCAaoqBXl4)
-GitHub Repository:- https://github.com/vsaylee4/TeamHydra_Starbucks
 
-Project Journal:- https://github.com/vsaylee4/TeamHydra_Starbucks/tree/master/ProjectJournal
+2. GitHub Repository:- https://github.com/vsaylee4/TeamHydra_Starbucks
 
-Sprint Task Sheet:- https://github.com/vsaylee4/TeamHydra_Starbucks/blob/master/ProjectJournal/Sprint%20Task%20Sheet%20-%20Team%20Hyrda.xlsx
+3. Project Journal:- https://github.com/vsaylee4/TeamHydra_Starbucks/tree/master/ProjectJournal
 
-Presentation Slide Deck  
+4. Sprint Task Sheet:- https://github.com/vsaylee4/TeamHydra_Starbucks/blob/master/ProjectJournal/Sprint%20Task%20Sheet%20-%20Team%20Hyrda.xlsx
+
+5. Presentation Slide Deck:- https://github.com/vsaylee4/TeamHydra_Starbucks/blob/master/images/Starbucks.pptx
 
 Project Board 
 
@@ -96,7 +95,7 @@ Performed integration testing to testrd complete work flow.
 
 ## BurnDown Chart
 
-
+![Burndown](/images/BurndownChart.jpg)
 
 
 ## Cloud Deployment
