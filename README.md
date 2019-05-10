@@ -45,7 +45,7 @@ Implemented REST APIs
 
 8. UI Wireframes:- https://github.com/vsaylee4/TeamHydra_Starbucks/tree/master/UI_Wireframes
 
-
+<br /><br />
 ## Team Member Contribution
 
 ### Anand Muralidhara (013752622)
@@ -91,12 +91,12 @@ Worked on Documentation and presentation.
 
 Performed integration testing to testrd complete work flow.
 
-
+<br /><br />
 ## BurnDown Chart
 
 ![Burndown](/images/BurndownChart.jpg)
 
-
+<br /><br />
 ## Cloud Deployment
 
 Deployed on AWS Cloud using EBS. 
@@ -105,7 +105,7 @@ Enabled Auto Scaling up to 3 instances and used ELB for load balancing.
 
 Added Alerts for status updates.
 
-
+<br /><br />
 ## Feature Set
 
 New user can create new account using “Join Now”. New record is created is created in RDS. If username is already present in database, then join now is restricted.  
@@ -120,8 +120,7 @@ Payment for the order can be done through payments.
 
 User can log out of application using Sign Out.
 
-
-
+<br /><br />
 ## Steps to run project 
 
 Download code form GitHub 
